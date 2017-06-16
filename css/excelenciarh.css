@@ -164,6 +164,7 @@ h4 {
 .sobre {
 	padding-top: 120px;
 }
+
 /* Depoimentos */
 
 .depoimentos {
@@ -270,7 +271,7 @@ hr {
 	background-image: url(../imgs/contato_empresabg.png);
 	padding-top: 40px;
 	padding-left: 40px;
-	padding-right: 40px;
+	padding-right: 15px;
 	float: right;
 }
 .contatoProfissionais {

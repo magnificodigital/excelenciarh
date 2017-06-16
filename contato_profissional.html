@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Idmaniacs Estratégia e Criação" />
+<title>Consultoria e Recursos Humanos - Varejo de Luxo e Premium</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="formValidation/formValidation.js"></script>
+<script type="text/javascript" src="formValidation/framework/bootstrap.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/excelenciarh.css">
+<link rel="stylesheet" href="formValidation/formValidation.css"/>
+
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58544508-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+.conteudoLightbox {
+	padding-top: 40px;
+	text-align:center;
+}
+.formularioProfissional {
+	text-align:left;
+}
+.form-control {
+	color:#333333;
+	
+}
+</style>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Conteúdo -->
+<div class="conteudoLightbox">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>ENVIE O SEU CV</h2>
+      <br /><hr />
+      <p class="fonte16">Preencha o formulário abaixo e envie o seu CV. Após análise, entraremos em contato para agendar uma entrevista.<br />
+      </p>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr />
+      <i class="fa fa-envelope fa-3x"></i>
+      <br /><br />
+      </div>
+  </div>
+
+
+<form id="contactForm" method="post" action="contato_profissionalEnvia.php" enctype="multipart/form-data" data-fv-message="Erro" data-fv-icon-valid="glyphicon glyphicon-ok" data-fv-icon-invalid="glyphicon glyphicon-remove" data-fv-icon-validating="glyphicon glyphicon-refresh">
+    
+<div class="formularioProfissional">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="text" class="form-control" id="nomeRemetente" name="nomeRemetente" placeholder="Nome:" required data-fv-notempty-message="O campo NOME é obrigatório.">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <input type="email" class="form-control" id="emailRemetente" name="emailRemetente" placeholder="E-mail:" required data-fv-notempty-message="O campo E-MAIL é obrigatório.">
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+      <input type="text" class="form-control" id="celularRemetente" name="celularRemetente" placeholder="Celular:" required data-fv-notempty-message="O campo CELULAR é obrigatório." data-fv-digits data-fv-digits-message="Somente números.">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="file" class="form-control" id="firstFile" name="firstFile" accept="application/pdf" value="Selecionar CV" required data-fv-notempty-message="Anexe o seu CV.">
+        <span class="help-block">Somente arquivos em PDF com no máximo 5 MB.</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+      <textarea class="form-control" rows="3" id="mensagemRemetente" name="mensagemRemetente" placeholder="Mensagem:" required data-fv-notempty-message="O campo MENSAGEM é obrigatório."></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+      <button type="submit" name="Submit" class="btn btn-formulario">ENVIAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+  <div class="row">
+    <div class="col-md-12">
+      <hr />
+      <br />
+    </div>
+  </div>
+
+<!-- Form Validation --> 
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('button[data-toggle]').on('click', function() {
+        var $target = $($(this).attr('data-toggle'));
+        $target.toggle();
+        if (!$target.is(':visible')) {
+            // Enable the submit buttons in case additional fields are not valid
+            $('#contactForm').data('formValidation').disableSubmitButtons(false);
+        }
+    });
+    $('#contactForm').formValidation();
+});
+</script>
+
+</body>
+</html>
